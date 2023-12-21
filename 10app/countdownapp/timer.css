@@ -1,0 +1,46 @@
+*
+{
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(pu.png);
+    background-size: cover;
+    position: center center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 75vh;
+    font-family: "popins", sans-serif;
+    margin: 0px;
+  
+  
+}
+.Countdown-container{
+    display: flex;
+}
+
+h1{
+    font-weight:bolder;
+    font-size: 2rem;
+    margin-top: 7rem;
+    text-decoration-color: rgb(from color r g b);
+    text-decoration:wavy;
+    color: rgb(from color r g b);
+}
+
+.big-text{
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 1;
+    margin: 0 2rem;
+  
+}
+.Countdown-el{
+    text-align: center;
+}
+
+.C span{
+    font-size: 2 rem;
+}  
