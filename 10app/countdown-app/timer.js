@@ -4,7 +4,25 @@ const minsEl = document.getElementById('mins');
 const secondsEl = document.getElementById('seconds')
 
 
-const newYear = '1 Jan 2024';
+const newYear = '1 Jan 2025';
+
+function updateCountdown() {
+    seconds--;
+  
+    if (seconds < 0) {
+      seconds = 59;
+      minutes--;}
+      if (minutes < 0) {
+        minutes = 59;
+        hours--;}
+        if (hours < 0) {
+          hours = 23;
+          days--;}
+          if (days < 0) {
+            newYear++;
+            days = 365; // Reset days for the new year
+          } }
+
 
 function countDown(){
     const newYearDate = new Date (newYear);
@@ -25,9 +43,14 @@ function countDown(){
     secondsEl.innerHTML= formatTime(seconds);
 
 
-function formatTime(time){
-    return time < 10? '0${time}' : time;
-}
+    function formatTime(time) {
+        return time.toString().padStart(2, '0');
+      }
+      
+
+// function formatTime(time){
+//     return time < 10? '0${time}' : time;
+// }
     console.log(days, hours, mins, seconds);
 
     
