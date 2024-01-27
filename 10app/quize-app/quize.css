@@ -1,0 +1,48 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin:0rem ;
+    background-color: beige;
+    background-image: linear-gradient(315deg);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    min-height: 100vh;
+}
+
+.quize-container{
+
+    background-color: aliceblue;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 2px rgba(100, 100, 100, 100, 0.1);
+    overflow: hidden;
+    width: 600px;
+    max-width: 100%;
+}
+
+.quize-header{ 
+    padding: 4rem;
+}
+
+.ul{
+    list-style-type: none;
+    padding: 0;
+
+}
+
+button{
+    display: block;
+    color: rgb(253, 253, 253);
+    padding: 1.3rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    font-family: inherit;
+    width: 100%;
+    background-color: blue;
+
+
+
+}

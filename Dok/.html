@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SabiDoktor Chat</title>
+</head>
+<body>
+  <h1>SabiDoktor Chat</h1>
+  <form id="chatForm">
+    <label for="messageInput">Enter your message:</label>
+    <input type="text" id="messageInput" name="message" required>
+    <button type="button" onclick="sendMessage()">Send</button>
+  </form>
+  <div id="responseContainer"></div>
+
+  <script>
+    function sendMessage() {
+      const messageInput = document.getElementById('messageInput');
+      const responseContainer = document.getElementById('responseContainer');
+
+      // Get user message from the input
+      const userMessage = messageInput.value;
+
+      // Send POST request to the server
+      fetch('http://localhost:3000/webhook', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ message: userMessage }),
+      })
+      .then(response => response.json())
+      .then(data => {
+        // Display the response in the container
+        responseContainer.innerHTML = `<p><strong>User:</strong> ${userMessage}</p><p><strong>SabiDoktor:</strong> ${data.response}</p>`;
+      })
+      .catch(error => console.error('Error:', error));
+    }
+  </script>
+</body>
+</html>

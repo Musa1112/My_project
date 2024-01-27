@@ -43,14 +43,14 @@ function countDown(){
     secondsEl.innerHTML= formatTime(seconds);
 
 
-    function formatTime(time) {
-        return time.toString().padStart(2, '0');
-      }
+    // function formatTime(time) {
+    //     return time.toString().padStart(2, '0');
+    //   }
       
 
-// function formatTime(time){
-//     return time < 10? '0${time}' : time;
-// }
+function formatTime(time){
+    return time < 10? `0${time}` : time;
+}
     console.log(days, hours, mins, seconds);
 
     
