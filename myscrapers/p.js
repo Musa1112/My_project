@@ -1,8 +1,5 @@
 const puppeteer = require ('puppeteer');
-const fs = require ('fs/promises');
-
-
-async function bot (){
+const fs = require ('fs/promises');async function bot (){
     const browser = await puppeteer.launch({headless:false,  executablePath: `C:/\Program Files/\Google/\Chrome/\Application/\chrome.exe` })
     
     const urls = [`https://www.ciceksepeti.com/taki-modelleri`,`https://www.ciceksepeti.com/taki-modelleri?page=`]

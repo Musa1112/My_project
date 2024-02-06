@@ -50,7 +50,7 @@ async function bot() {
 
             page.close();
         } else if (url.includes(`page`)) {
-            for (let index = 2; index < 100; index++) {
+            for (let index = 2; index < 10; index++) {
                 const new_url = `https://www.ciceksepeti.com/taki-modelleri?page=${index}`;
 
                 const page = await browser.newPage();
@@ -88,7 +88,7 @@ async function bot() {
     }
 
     // Save Excel file
-    await workbook.xlsx.writeFile('productsx.xlsx');
+    await workbook.xlsx.writeFile('products.xlsx');
 
     await browser.close();
 }
